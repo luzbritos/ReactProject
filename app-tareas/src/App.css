@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    background-color: #FFEFD6;
+    font-family: 'Lato', sans-serif;
+    margin-top: 40px;
+}
+
+h1{
+    color: #3A8891;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 20px 0;
+    
+
+}
+
+.aplicacion-tareas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Lista de tareas */
+.tareas-lista-principal{
+    width: 600px;
+    min-height: 500px;
+    background-color: #F2DEBA;
+    padding: 25px;
+    margin: 10px;
+    justify-content: center;
+    border-radius: 25px;
+    border: solid 4px #222222;
+}
