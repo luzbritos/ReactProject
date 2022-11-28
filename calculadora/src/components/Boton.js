@@ -1,11 +1,16 @@
-import react from 'react'
+import React from 'react'
+import '../css/Boton.css'
 
 function Boton(props){
+    const esOperador = valor => {
+        return isNaN(valor) && (valor != '.') && (valor != '=')
+    }
+
     return(
-        <div>
+        <div className={`boton-contenedor ${esOperador(props.children) ? 'operador':null}`.trimEnd()} onClick={() => props.manejarClick(props.children)} >
             {props.children}
         </div>
     )
 }
 
-// 4:12:18
+export default Boton
