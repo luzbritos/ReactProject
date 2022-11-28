@@ -1,5 +1,4 @@
 import './App.css';
-import luzlogo from './img/luzlogo.png'
 import Boton from './components/Boton';
 import Pantalla from './components/Pantalla';
 import BotonClear from './components/BotonClear';
@@ -12,7 +11,7 @@ function App(){
 
   const agregarInput = val => {
     setInput(input + val)
-  }
+  };
 
   const calcularResultado = () => {
     if(input){
