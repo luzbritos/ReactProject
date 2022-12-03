@@ -25,7 +25,7 @@ function App(){
   return (
     <div className='App'>
       
-      <div className='contenedor-calculadora' >
+      <div className='contenedor-calculadora shadow' >
         <Pantalla input={input} />
         <div className='fila'>
           <Boton manejarClick={agregarInput}>1</Boton> 
