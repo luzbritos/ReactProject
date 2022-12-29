@@ -10,11 +10,17 @@
     font-size: 18px;
     background-color: #FFEFD6;
     padding: 14px 32px 14px 16px;
-    border-radius: 4px 0 0 4px;
+    border-radius: 10px ;
     border: 2px solid #222222;
     outline: none;
 }
 
+.tarea-input:focus {
+    outline-color: white;
+    background-color: #212121;
+    color: #e8e8e8;
+    box-shadow: 5px 5px #888888;
+   }
 /* .tarea-boton{
     padding: 16px;
     font-size: 18px;
