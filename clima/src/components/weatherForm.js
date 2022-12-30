@@ -20,7 +20,10 @@ export default function WeatherForm({onChangeCity}){
 
     return(
         <form onSubmit={handleSubmit}>
-            <input type="text" onChange={onChange} name="" value={city}/>
+            <input 
+            type="text" 
+            onChange={onChange}             
+            value={city}/>
         </form>
     )
 }
