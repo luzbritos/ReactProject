@@ -1,4 +1,4 @@
-import EmojiPickerInput from "./components/emojisPicker/emojiPicherInput";
+import EmojiPickerInput from "./components/emojisPicker/emojiPickerInput";
 
 
 
