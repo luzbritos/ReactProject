@@ -4,7 +4,7 @@ export const links = [
   {
     id: 1,
     url: '/',
-    text: 'random',
+    text: 'home',
   },
   {
     id: 2,
@@ -26,6 +26,7 @@ export const links = [
     url: '/profile',
     text: 'profile',
   },
+  
 ]
 
 export const social = [
@@ -46,7 +47,7 @@ export const social = [
   },
   {
     id: 4,
-    url: 'https://www.twitter.com',
+    url: 'https://www.behance.net',
     icon: <FaBehance />,
   },
 ]
