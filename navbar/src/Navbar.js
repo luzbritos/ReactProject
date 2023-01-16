@@ -32,7 +32,7 @@ const Navbar = () => {
                         {links.map((link) => {
                             const { id, url, text } = link;
                             return (
-                                <li key={id}>
+                                <li key={id} className='hvr-underline-from-center'>
                                     <a href={url}>{text}</a>
                                 </li>
                             );
@@ -43,8 +43,8 @@ const Navbar = () => {
                     {social.map((socialIcon) => {
                         const { id, url, icon } = socialIcon;
                         return (
-                            <li key={id}>
-                                <a href={url}>{icon}</a>
+                            <li key={id} className='hvr-icon-grow-rotate'>
+                                <a href={url} className='hvr-icon'>{icon}</a>
                             </li>
                         );
                     })}
