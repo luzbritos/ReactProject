@@ -5,12 +5,12 @@ import Values from 'values.js'
 function App() {
   const [color, setColor] = useState('')
   const [error, setError] = useState(false)
-  const [list, setList] = useState(new Values('#017B92').all(10))
+  const [list, setList] = useState(new Values('#017B92').all(5))
 
   const handleSubmit = (e) => {
     e.preventDefault()
     try {
-      let colors = new Values(color).all(10)
+      let colors = new Values(color).all(5)
       setList(colors)
     console.log(colors)
     } catch (error) {
