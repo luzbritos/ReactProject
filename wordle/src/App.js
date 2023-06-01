@@ -34,9 +34,10 @@ function App() {
     }
     if (wordSet.has(currWord.toLowerCase())) {
       setCurrAttempt({ attempt: currAttempt.attempt + 1, letter: 0 });
-    } else {
-      alert("Word not found");
-    }
+    } 
+    // else {
+    //   alert("Word not found");
+    // }
 
     if (currWord === correctWord) {
       setGameOver({ gameOver: true, guessedWord: true });
