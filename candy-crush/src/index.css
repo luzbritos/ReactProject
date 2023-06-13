@@ -2,7 +2,7 @@
   display: flex;
   padding: 30px;
   /* background-color: #90CBF4; */
-  background-color: #FFCFD2;
+  /* background-color: #FFCFD2; */
 }
 
 .game{
@@ -25,10 +25,18 @@
   height: 50px;
 } */
 
-.score-board {
+.score-board {  
   width: 50px;
   height: 50px;
+  align-items: center;
+  display: flex;
+ 
+  justify-content: center;
+  
+  /* line-height: 100px;
   text-align: center;
+  vertical-align: middle; */
+  /* justify-content: center; */
   --fancy-button-gradient-0: #8d49fd;
   --fancy-button-gradient-50: #7f56f3;
   --fancy-button-gradient-100: #5691f3;
@@ -44,6 +52,7 @@
   text-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.2);
   padding: 0;
   margin: 0;
+  margin-left: 30px;
   appearance: none;
   border: none;
   outline: none;
@@ -55,5 +64,12 @@
   color: #fff;
   background-image: linear-gradient(to bottom, var(--fancy-button-gradient-0) 0%, var(--fancy-button-gradient-50) 50%, var(--fancy-button-gradient-100) 100%);
   box-shadow: 0px 4px 12px rgba(9, 12, 60, 0.15), 0px 2px 8px rgba(9, 12, 60, 0.15), 0px 1px 3px var(--fancy-button-inner-shadow-top-lg), inset 0px 1px 1px var(--fancy-button-inner-shadow-top), inset 0px -1px 3px var(--fancy-button-inner-shadow-bottom);
+}
+
+.score-board h2{
+  color: black;
+ 
+  /* margin: auto; */
+  /* padding-bottom: ; */
 }
 
