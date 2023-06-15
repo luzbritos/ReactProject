@@ -19,6 +19,7 @@ function App() {
   const [choiceOne, setChoiceOne] = useState(null)
   const [choiceTwo, setChoiceTwo] = useState(null)
   const [disable, setDisable] = useState(false)
+  // let puntaje
 
   //shufle cards
   const shuffleCards = () => {
@@ -44,16 +45,19 @@ function App() {
     if (choiceOne && choiceTwo) {
       setDisable(true)
       if (choiceOne.src === choiceTwo.src) {
+        
         setCards(prevCards => {
           return prevCards.map(card => {
             if (card.src === choiceOne.src) {
               return { ...card, matched: true }
+              
             } else {
               return card
             }
           })
         })
         resetTurn()
+        // puntaje ++
       } else {
 
         setTimeout(() => resetTurn(), 1000)
@@ -92,7 +96,8 @@ function App() {
           />
         ))}
       </div>
-      <p>Turns: {turns} </p>
+      <p>Turns: {turns}</p>
+      {/* <p>Points: {puntaje}</p> */}
 
 
     </div>
