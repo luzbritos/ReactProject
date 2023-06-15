@@ -14,6 +14,14 @@ button {
   font-size: 1em;
 }
 button:hover {
-  background: #c23866;
-  color: #fff;
+  background: #FFC1C2;
+  color: #707070;
+  border: 2px solid #707070;
+}
+
+.card-grid{
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px ;
 }
