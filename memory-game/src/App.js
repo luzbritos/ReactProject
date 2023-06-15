@@ -18,42 +18,48 @@ function App() {
   const [turns, setTurns] = useState(0)
   const [choiceOne, setChoiceOne] = useState(null)
   const [choiceTwo, setChoiceTwo] = useState(null)
+  const [disable, setDisable] = useState(false)
 
   //shufle cards
   const shuffleCards = () => {
     const shuffleCards = [...cardImages, ...cardImages]
-    .sort(() => Math.random() - 0.5)
-    .map((card) => ({ ...card, id: Math.random()}))
+      .sort(() => Math.random() - 0.5)
+      .map((card) => ({ ...card, id: Math.random() }))
+    
+    setChoiceOne(null)
+    setChoiceTwo(null)
     setCards(shuffleCards)
     setTurns(0)
   }
   //handle a choice
   const handleChoice = (card) => {
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
-    
+
 
   }
 
   //compare 2 selected card
   useEffect(() => {
-    if(choiceOne && choiceTwo){
-      if(choiceOne.src === choiceTwo.src){
-       setCards(prevCards => {
-        return prevCards.map(card => {
-          if(card.src === choiceOne.src){
-            return{...card, matched: true}
-          }else{
-            return card
-          }
+
+    if (choiceOne && choiceTwo) {
+      setDisable(true)
+      if (choiceOne.src === choiceTwo.src) {
+        setCards(prevCards => {
+          return prevCards.map(card => {
+            if (card.src === choiceOne.src) {
+              return { ...card, matched: true }
+            } else {
+              return card
+            }
+          })
         })
-       })
         resetTurn()
-      }else{
-        
-        resetTurn()
+      } else {
+
+        setTimeout(() => resetTurn(), 1000)
       }
     }
-  }, [choiceOne,choiceTwo])
+  }, [choiceOne, choiceTwo])
   console.log(cards)
 
   //reset choices & increse turn
@@ -61,7 +67,14 @@ function App() {
     setChoiceOne(null)
     setChoiceTwo(null)
     setTurns(prevTurns => prevTurns + 1)
+    setDisable(false)
   }
+  
+  //start a new game automagically
+  useEffect(() => {
+    shuffleCards()
+  },[])
+
 
   return (
     <div className="App">
@@ -70,14 +83,17 @@ function App() {
 
       <div className='card-grid' >
         {cards.map(card => (
-          <SingleCard 
-          key={card.id} 
-          card={card} 
-          handleChoice={handleChoice}
-          flipped={card === choiceOne || card === choiceTwo || card.matched}
+          <SingleCard
+            key={card.id}
+            card={card}
+            handleChoice={handleChoice}
+            flipped={card === choiceOne || card === choiceTwo || card.matched}
+            disable={disable}
           />
         ))}
       </div>
+      <p>Turns: {turns} </p>
+
 
     </div>
   );
